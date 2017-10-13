@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="build/css/vendor.css">
+    <script src="build/js/vendor.min.js"></script>
+    <script type="text/javascript" src="build/js/app.js"></script>
+    <title>Solar Birthday</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h1>Solar Age</h1>
+          <h2>Enter your Earth birthday below</h2>
+          <form id="earth-birthday" action="index.html" method="post">
+            <div class="form-group">
+              <label for="birthdate">Please enter your birthday!</label>
+              <div class="input-group date">
+                <input id="birthdate" type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+              </div>
+
+            </div>
+            <button type="submit" class="btn btn-success" name="button">Submit</button>
+          </form>
+        </div>
+        <h1 id="time">The current time is </h1>
+      </div>
+    </div>
+  </body>
+</html>
