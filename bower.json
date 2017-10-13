@@ -6,7 +6,7 @@
     "Mitchell <meechllada@gmamil.com>"
   ],
   "license": "ISC",
-  "homepage": "",
+  "homepage": "https://github.com/mwlong23/solar-calendar",
   "ignore": [
     "**/.*",
     "node_modules",

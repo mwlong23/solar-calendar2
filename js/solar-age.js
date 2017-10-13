@@ -1,12 +1,13 @@
 export class SolarAge {
   constructor(){
     this.birthday;
+    this.now;
     this.secondsAge;
     this.earthYearsAge;
     this.mercuryAge;
     this.venusAge;
     this.marsAge;
-    this.jupiterAge
+    this.jupiterAge;
   }
 
 
@@ -25,23 +26,25 @@ export class SolarAge {
     let daysAlive = this.earthYearsToDays(yearsAlive) + this.earthMonthsToDays(monthsAlive)  + (nowDay - birthdayDay)
     let secondsAge = this.earthDaysToSeconds(daysAlive)
     this.secondsAge = secondsAge
-    this.yearsAge = this.earthAgeSecondsToYears(secondsAge)
+    this.earthYearsAge = this.earthAgeSecondsToYears(secondsAge)
+    // debugger;
     return secondsAge
   };
-  // earthYearsToSeconds(years){
-  //   days = earthYearsToDays(years)
-  //   hours =
-  //
-  // };
+  // birthday(birthday){
+  //   this.birthday = birthday
+  // }
+  // now(now){
+  //   this.now = now
+  // }
 
   earthMonthsToDays(months){
-    let days = months / 30.5
+    let days = months * 30.5
     return days
 
   };
 
   earthYearsToDays(years){
-    let days = years/365.0
+    let days = years * 365.0
     return days
   };
   earthDaysToSeconds(days){
@@ -78,6 +81,13 @@ export class SolarAge {
     return jupiterAge;
   }
 
+
+  planetaryAges(earthYears){
+    this.ageInMercuryYears(earthYears);
+    this.ageInVenusYears(earthYears);
+    this.ageInMarsYears(earthYears);
+    this.ageInJupiterYears(earthYears);
+  }
 
 
 

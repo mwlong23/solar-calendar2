@@ -7,23 +7,37 @@
     <title>Solar Birthday</title>
   </head>
   <body>
+    <div class="jumbotron">
+      <center><h1>Solar Age</h1>
+      <center><h2>Calculate your age on other planets!</h2></center>
+    </div>
     <div class="container">
       <div class="panel panel-default">
-        <div class="panel-body">
+        <div id="entry-form"class="panel-body">
           <h1>Solar Age</h1>
           <h2>Enter your Earth birthday below</h2>
           <form id="earth-birthday" action="index.html" method="post">
             <div class="form-group">
-              <label for="birthdate">Please enter your birthday!</label>
+              <label for="birthdate">Please enter your birthday(MM/DD/YYYY format)!</label>
               <div class="input-group date">
-                <input id="birthdate" type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+                <input id="birthday" type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
               </div>
-
             </div>
             <button type="submit" class="btn btn-success" name="button">Submit</button>
           </form>
         </div>
-        <h1 id="time">The current time is </h1>
+        <div id="results">
+          <h1 id="time">The current time is </h1>
+          <h1 id="seconds">You are exactly <span id="age-in-seconds"></span> seconds old!</h1>
+            Thats:
+            <ul>
+              <li><span id="mercury" ></span> years on Mercury,</li>
+              <li><span id="venus" ></span> years on Venus,</li>
+              <li><span id="mars"></span> years on Mars, and</li>
+              <li><span id="jupiter" ></span> years on Jupiter</li>
+            </ul>
+        </div>
+
       </div>
     </div>
   </body>
