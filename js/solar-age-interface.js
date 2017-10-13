@@ -20,7 +20,4 @@ $(document).ready(function(){
     $('#entry-form').hide();
     $('#results').show();
   });
-
-
-
 });
