@@ -127,17 +127,17 @@ var SolarAge = exports.SolarAge = function () {
 var _solarAge = require('./../js/solar-age.js');
 
 $(document).ready(function () {
-  $('#time').text(moment().format('MM.DD.YYYY'));
-  // $('#time').text(moment().formatWithJDF("dd.MM.yyyy"));
   $('form').submit(function (event) {
     event.preventDefault();
     var solarAge = new _solarAge.SolarAge();
     var birthday = $('#birthday').val();
     var date = new Date();
     var formattedDate = date.getMonth() + 1 + '/' + date.getDate() + '/' + date.getFullYear();
+
     var ageInSeconds = solarAge.ageInSeconds(birthday, formattedDate);
     var ageInYears = solarAge.earthYearsAge;
     solarAge.planetaryAges(ageInYears);
+
     $('#age-in-seconds').text(ageInSeconds);
     $('#mercury').text(solarAge.mercuryAge);
     $('#venus').text(solarAge.venusAge);
@@ -145,8 +145,6 @@ $(document).ready(function () {
     $('#jupiter').text(solarAge.jupiterAge);
     $('#entry-form').hide();
     $('#results').show();
-
-    debugger;
   });
 });
 

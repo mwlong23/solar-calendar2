@@ -7,8 +7,11 @@
   display:none;
 }
 
-.jumbotron{
+.jumbotron {
   background-color: #0366BE;
+}
+body {
+  background-image: url('cosmos.jpg')
 }
 
 /*!
